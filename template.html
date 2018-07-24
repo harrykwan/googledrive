@@ -31,16 +31,12 @@
 
       var valueRangeBody = {
         // TODO: Add desired properties to the request body.
-         "majorDimension": "rows",
-         "values": [
-          [
-            "testapi3",
-            "yyotest3"
-          ],
-          [
-            "hasda2"
-          ]
-         ]
+        "majorDimension": "rows",
+        "values": [
+          ["firstcell",
+          "secondcell"].
+          ["thirdcell"]
+        ]
       };
 
       var request = gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody);
