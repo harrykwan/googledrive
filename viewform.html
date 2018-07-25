@@ -45,6 +45,7 @@
        https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
     -->
     <script>
+    var myresult;
     function makeApiCall() {
       var params = {
         // The ID of the spreadsheet to retrieve data from.
@@ -68,6 +69,8 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
+        var myresult = response.result;
+        document.getElementById("showsheet") = myresult.values;
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
