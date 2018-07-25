@@ -1,0 +1,14 @@
+<html>
+<body>
+PASTE THE LINK HERE:<br>
+<input type="text" id="linkpaste"><button onclick="getsheetid()">GO</button>
+<div id="showsheetid"></div>
+<script type="text/javascript">
+	function getsheetid() {
+		var tempstr = document.getElementById("linkpaste").value;
+		document.getElementById("showsheetid").innerHTML = tempstr.substring(tempstr.indexOf('/d/')+3,tempstr.indexOf("/edit"));
+		//https://docs.google.com/spreadsheets/d/1DyjIJd6b5hXbNOGTmdTZTMwVc0GPqrlVkx-YKsoc41g/edit#gid=0
+	}
+</script>
+</body>
+</html>
