@@ -70,7 +70,11 @@
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
         myresult = response.result;
-        document.getElementById("myshowsheet").innerHTML = myresult.values;
+        document.getElementById("myshowsheet").innerHTML = '';
+        for (var j=0; j<myresult.length; j++){
+        	document.getElementById("myshowsheet").innerHTML += myresult.values[j]+'<br>';
+        }
+        
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
