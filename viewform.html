@@ -72,7 +72,7 @@
         myresult = response.result;
         document.getElementById("myshowsheet").innerHTML = '';
         for (var j=0; j<myresult.length; j++){
-        	document.getElementById("myshowsheet").innerHTML += myresult.values[j]+'<br>';
+        	document.getElementById("myshowsheet").innerHTML += myresult[j]+'<br>';
         }
         
       }, function(reason) {
